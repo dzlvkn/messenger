@@ -1,5 +1,8 @@
 public class Message {
+ anasClass
 
+
+ master
     private User sender;
     private User recipient;
     private String text;
@@ -38,9 +41,13 @@ public class Message {
         Message[] msgWithMom = {
                 new Message(mom, mainUser, "Привет!", "17:20"),
                 new Message(mom, mainUser, "У тебя пары закончились? Когда домой?", "17:21"),
+ anasClass
+                new Message(mainUser, mom, "Привет, уже еду домой", "17:30")
+
                 new Message(mainUser, mom, "Привет, уже еду домой", "17:30"),
                 new Message(mom, mainUser, "Хорошо", "17:30"),
                 new Message(mom, mainUser, "Ещё зайди, пожалуйста, в магазин и купи хлеб с молоком", "17:31"),
+ master
         };
 
         return msgWithMom;
@@ -60,8 +67,12 @@ public class Message {
         Message[] msgWithFriend1 = {
                 new Message(friend1, mainUser, "Ты где? У нас уже платное ожидание началось!", "09:57"),
                 new Message(mainUser, friend1, "5 минут и вылетаю!", "09:58"),
+ anasClass
+                new Message(friend1, mainUser, "Давай быстрее!!", "09:59")
+
                 new Message(friend1, mainUser, "Давай быстрее!!", "09:59"),
                 new Message(mainUser, friend1, "Уже бегу", "10:05")
+ master
         };
 
         return msgWithFriend1;
@@ -77,6 +88,9 @@ public class Message {
 
         return msgWithFriend2;
     }
+ anasClass
 
 
+
+ master
 }

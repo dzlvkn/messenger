@@ -1,5 +1,7 @@
 public class Dialog {
+ anasClass
 
+ master
     private String chatName;
     private Message[] messages;
 
@@ -20,9 +22,15 @@ public class Dialog {
 
     public String toString() {
 
+ anasClass
+        String result =  "Чат с " + chatName + "\n";
+        for (int i = 0; i < messages.length; ++i) {
+            result += messages[i].toString();
+
         String result =  "Чат с " + chatName + "\n" + "\n";
         for (int i = 0; i < messages.length; ++i) {
             result += messages[i].toString() + "\n";
+ master
         }
 
         return result;

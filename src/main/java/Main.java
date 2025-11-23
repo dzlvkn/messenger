@@ -1,11 +1,37 @@
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        Channel[] channels = Channel.getAll();
+        Dialog[] dialogs = {
+                Dialog.getChatWithMom(),
+                Dialog.getChatWithSister(),
+                Dialog.getChatWithFriend1(),
+                Dialog.getChatWithFriend2()
+        };
 
-        System.out.println(Dialog.getChatWithMom());
-        System.out.println(Dialog.getChatWithSister());
-        System.out.println(Dialog.getChatWithFriend1());
-        System.out.println(Dialog.getChatWithFriend2());
+        System.out.println("MESSANGER" + "\n");
 
+        System.out.println("Каналы:");
 
+        for (int i = 0; i < channels.length; i++) {
+            System.out.println((i + 1) + ") " + channels[i].getName());
+        }
+
+        System.out.println("\n" + "Беседы:");
+
+        for (int i = 0; i < dialogs.length; i++) {
+            System.out.println((i+5) + ") " + dialogs[i].getChatName());
+        }
+
+        int choice = sc.nextInt();
+
+        if (0 < choice && choice < 5) {
+            channels[choice - 1].printMessages();
+        } else {
+            Dialog selectedDialog = dialogs[choice - 5];
+            System.out.println(selectedDialog);
+        }
     }
 }

@@ -15,6 +15,12 @@ public class Channel {
         return messages;
     }
 
+    public void printMessages() {
+        for (int i = 0; i < messages.length; i++) {
+            System.out.println(messages[i]);
+        }
+    }
+
     public static Channel[] getAll() {
         Channel[] channels = new Channel[4];
         channels[0] = new Channel("KOSTI", new String[]{"Сегодня отмечается День эспрессо", "Фанаты Хейли и Джастина устали терпеть негативное отношение к их паре со стороны фанатов Селены", "В Новосибирске автомобиль пробил двери вестибюля метро", "Вакцина против рака легких впервые будет испытана на людях в 2026 году", "В Москве 22-летняя девушка оказалась у врачей после ежедневных «марафонов» из пяти кружек матчи"});

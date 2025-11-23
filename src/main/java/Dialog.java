@@ -20,9 +20,9 @@ public class Dialog {
 
     public String toString() {
 
-        String result =  "Чат с " + chatName + "\n";
+        String result =  "Чат с " + chatName + "\n" + "\n";
         for (int i = 0; i < messages.length; ++i) {
-            result += messages[i].toString();
+            result += messages[i].toString() + "\n";
         }
 
         return result;

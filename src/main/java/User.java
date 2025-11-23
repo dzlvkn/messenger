@@ -1,4 +1,8 @@
 public class User {
+ anasClass
+
+
+ master
     private String name;
 
     public User(String name) {
@@ -12,4 +16,8 @@ public class User {
     public String toString() {
         return name;
     }
+ anasClass
+
+
+ master
 }

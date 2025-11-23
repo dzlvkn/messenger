@@ -28,11 +28,11 @@ public class Message {
         return result;
     }
 
-    public static User mom = new User("Мама");
+    public static User mom = new User("Мамочка");
     public static User mainUser = new User("Динара");
-    public static User friend1 = new User("Саша");
-    public static User sister = new User("Рина");
-    public static User friend2 = new User("Даша");
+    public static User friend1 = new User("Сашулик");
+    public static User sister = new User("Систр");
+    public static User friend2 = new User("Дашулик");
 
     public static Message[] getMsgWithMom() {
         Message[] msgWithMom = {

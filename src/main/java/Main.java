@@ -4,6 +4,12 @@ public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         Channel[] channels = Channel.getAll();
+        Dialog[] dialogs = {
+                Dialog.getChatWithMom(),
+                Dialog.getChatWithSister(),
+                Dialog.getChatWithFriend1(),
+                Dialog.getChatWithFriend2()
+        };
 
         System.out.println("Выберите канал или группу, введя их порядковый номер");
 
@@ -11,9 +17,18 @@ public class Main {
             System.out.println((i + 1) + ") " + channels[i].getName());
         }
 
+        for (int i = 0; i < dialogs.length; i++) {
+            System.out.println((i+5) + ") " + dialogs[i].getChatName());
+        }
+
         int choice = sc.nextInt();
 
-        channels[choice - 1].printMessages();
+        if (0 < choice && choice < 5) {
+            channels[choice - 1].printMessages();
+        } else {
+            Dialog selectedDialog = dialogs[choice - 5];
+            System.out.println(selectedDialog);
+        }
 
     }
 }

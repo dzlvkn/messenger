@@ -16,13 +16,13 @@ public class Main {
         System.out.println("Каналы:");
 
         for (int i = 0; i < channels.length; i++) {
-            System.out.println((i + 1) + ") " + channels[i].getName());
+            System.out.println((i + 1) + ". " + channels[i].getName());
         }
 
         System.out.println("\n" + "Беседы:");
 
         for (int i = 0; i < dialogs.length; i++) {
-            System.out.println((i+5) + ") " + dialogs[i].getChatName());
+            System.out.println((i+5) + ". " + dialogs[i].getChatName());
         }
 
         int choice = sc.nextInt();
